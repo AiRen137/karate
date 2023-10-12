@@ -1,0 +1,111 @@
+<nav class="navbar is-fixed-top">
+
+    <div class="navbar-brand">
+      <a class="navbar-item has-text-link" href="{{ url_for('index') }}">
+        <img src="{{ url_for('static', filename='gtm_logo.png') }}">
+      </a>
+    </div>
+  
+    <div class="navbar-menu">
+  
+      <div class="navbar-start">
+  
+        <div class="navbar-item has-text-link has-dropdown is-hoverable">
+          <a class="navbar-link has-text-link is-arrowless">
+            Grading Syllabus
+          </a>
+  
+          <div class="navbar-dropdown">
+  
+            <a class="navbar-item has-text-link" href="{{ url_for('9th_kyu') }}">
+              9th Kyu - Red Belt
+            </a>
+  
+            <a class="navbar-item has-text-link" href="{{ url_for('8th_kyu') }}">
+              8th Kyu - Yellow Belt
+            </a>
+  
+            <a class="navbar-item has-text-link" href="{{ url_for('7th_kyu') }}">
+              7th Kyu - Orange Belt
+            </a>
+  
+            <a class="navbar-item has-text-link" href="{{ url_for('6th_kyu') }}">
+              6th Kyu - Green Belt
+            </a>
+  
+            <a class="navbar-item has-text-link" href="{{ url_for('5th_kyu') }}">
+              5th Kyu - Blue Belt
+            </a>
+  
+            <a class="navbar-item has-text-link" href="{{ url_for('4th_kyu') }}">
+              4th Kyu - Purple Belt
+            </a>
+  
+            <a class="navbar-item has-text-link" href="{{ url_for('3rd_kyu') }}">
+              3rd Kyu - Brown Belt
+            </a>
+
+            <a class="navbar-item has-text-link" href="{{ url_for('2nd_kyu') }}">
+              2nd Kyu - Brown Belt
+            </a>
+
+            <a class="navbar-item has-text-link" href="{{ url_for('1st_kyu') }}">
+              1st Kyu - Brown Belt
+            </a>
+
+            <a class="navbar-item has-text-link" href="{{ url_for('1st_dan') }}">
+              1st Dan - Black Belt
+            </a>
+
+            <a class="navbar-item has-text-link" href="{{ url_for('2nd_dan') }}">
+              2nd Dan - Black Belt
+            </a>
+
+            <a class="navbar-item has-text-link" href="{{ url_for('3rd_dan') }}">
+              3rd Dan - Black Belt
+            </a>
+  
+          </div>
+  
+        </div>
+  
+  
+        <a class="navbar-item has-text-link" href="{{ url_for('training_log') }}">
+          Training Log
+        </a>
+  
+        <div class="navbar-item has-text-link has-dropdown is-hoverable">
+          <a class="navbar-link has-text-link is-arrowless">
+            Other Resources
+          </a>
+  
+          <div class="navbar-dropdown">
+            <a class="navbar-item has-text-link" href="{{ url_for('vocab') }}">
+              Vocabulary Lists
+            </a>
+  
+            <a class="navbar-item has-text-link" href="{{ url_for('quick_guides') }}">
+              Quick Guides
+            </a>
+  
+            <a class="navbar-item has-text-link" href="{{ url_for('kata') }}">
+              Kata Videos
+            </a>
+  
+            <a class="navbar-item has-text-link" href="{{ url_for('misc') }}">
+              Miscellaneous
+            </a>
+  
+          </div>
+        </div>
+  
+      </div>
+  
+      <div class="navbar-end">
+  
+  
+      </div>
+  
+    </div>
+  
+  </nav>
