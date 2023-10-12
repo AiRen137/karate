@@ -1,111 +1,96 @@
-<nav class="navbar is-fixed-top">
+<!DOCTYPE html>
+<html>
+<head>
+    <base target="_parent">
+    <style>
+        /* Add some basic styling */
+        ul.navbar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            overflow: hidden;
+        }
 
-    <div class="navbar-brand">
-      <a class="navbar-item has-text-link" href="{{ url_for('index') }}">
-        <img src="{{ url_for('static', filename='gtm_logo.png') }}">
-      </a>
-    </div>
-  
-    <div class="navbar-menu">
-  
-      <div class="navbar-start">
-  
-        <div class="navbar-item has-text-link has-dropdown is-hoverable">
-          <a class="navbar-link has-text-link is-arrowless">
-            Grading Syllabus
-          </a>
-  
-          <div class="navbar-dropdown">
-  
-            <a class="navbar-item has-text-link" href="{{ url_for('9th_kyu') }}">
-              9th Kyu - Red Belt
-            </a>
-  
-            <a class="navbar-item has-text-link" href="{{ url_for('8th_kyu') }}">
-              8th Kyu - Yellow Belt
-            </a>
-  
-            <a class="navbar-item has-text-link" href="{{ url_for('7th_kyu') }}">
-              7th Kyu - Orange Belt
-            </a>
-  
-            <a class="navbar-item has-text-link" href="{{ url_for('6th_kyu') }}">
-              6th Kyu - Green Belt
-            </a>
-  
-            <a class="navbar-item has-text-link" href="{{ url_for('5th_kyu') }}">
-              5th Kyu - Blue Belt
-            </a>
-  
-            <a class="navbar-item has-text-link" href="{{ url_for('4th_kyu') }}">
-              4th Kyu - Purple Belt
-            </a>
-  
-            <a class="navbar-item has-text-link" href="{{ url_for('3rd_kyu') }}">
-              3rd Kyu - Brown Belt
-            </a>
+        ul.navbar li {
+            float: left;
+        }
 
-            <a class="navbar-item has-text-link" href="{{ url_for('2nd_kyu') }}">
-              2nd Kyu - Brown Belt
-            </a>
+        ul.navbar li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
 
-            <a class="navbar-item has-text-link" href="{{ url_for('1st_kyu') }}">
-              1st Kyu - Brown Belt
-            </a>
+        ul.navbar li a:hover {
+            background-color: #444;
+        }
 
-            <a class="navbar-item has-text-link" href="{{ url_for('1st_dan') }}">
-              1st Dan - Black Belt
-            </a>
+        /* Style for the dropdown */
+        ul.navbar li.dropdown {
+            display: block;
+        }
 
-            <a class="navbar-item has-text-link" href="{{ url_for('2nd_dan') }}">
-              2nd Dan - Black Belt
-            </a>
+        ul.navbar .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+        }
 
-            <a class="navbar-item has-text-link" href="{{ url_for('3rd_dan') }}">
-              3rd Dan - Black Belt
-            </a>
-  
-          </div>
-  
+        ul.navbar .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        ul.navbar .dropdown-content a:hover {
+            background-color: #444;
+        }
+
+        /* Show the dropdown when hovering over the parent element */
+        ul.navbar li.dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<ul class="navbar">
+
+    <li><a href="index.html">Home</a></li>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Grading Syllabus</a>
+        <div class="dropdown-content">
+            <a href="9kyu.html">9th Kyu - Red Belt</a>
+            <a href="8kyu.html">8th Kyu - Yellow Belt</a>
+            <a href="7kyu.html">7th Kyu - Orange Belt</a>
+            <a href="6kyu.html">6th Kyu - Green Belt</a>
+            <a href="5kyu.html">5th Kyu - Blue Belt</a>
+            <a href="4kyu.html">4th Kyu - Purple Belt</a>
+            <a href="3kyu.html">3rd Kyu - Brown Belt</a>
+            <a href="2kyu.html">2nd Kyu - Brown Belt</a>
+            <a href="1kyu.html">1st Kyu - Brown Belt</a>
+            <a href="1dan.html">1st Dan - Black Belt</a>
+            <a href="2dan.html">2nd Dan - Black Belt</a>
+            <a href="3dan.html">3rd Dan - Black Belt</a>
         </div>
-  
-  
-        <a class="navbar-item has-text-link" href="{{ url_for('training_log') }}">
-          Training Log
-        </a>
-  
-        <div class="navbar-item has-text-link has-dropdown is-hoverable">
-          <a class="navbar-link has-text-link is-arrowless">
-            Other Resources
-          </a>
-  
-          <div class="navbar-dropdown">
-            <a class="navbar-item has-text-link" href="{{ url_for('vocab') }}">
-              Vocabulary Lists
-            </a>
-  
-            <a class="navbar-item has-text-link" href="{{ url_for('quick_guides') }}">
-              Quick Guides
-            </a>
-  
-            <a class="navbar-item has-text-link" href="{{ url_for('kata') }}">
-              Kata Videos
-            </a>
-  
-            <a class="navbar-item has-text-link" href="{{ url_for('misc') }}">
-              Miscellaneous
-            </a>
-  
-          </div>
+    </li>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Resources</a>
+        <div class="dropdown-content">
+            <a href="#vocab">Vocabulary Lists</a>
+            <a href="#kata">Kata Videos</a>
+            <a href="#misc">Miscellaneous</a>
         </div>
-  
-      </div>
-  
-      <div class="navbar-end">
-  
-  
-      </div>
-  
-    </div>
-  
-  </nav>
+    </li>
+    <li><a href="#traininglog">Training Log</a></li>
+</ul>
+
+
+</body>
+</html>
