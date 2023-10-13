@@ -1,5 +1,6 @@
 body {
     background-color: firebrick;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .box{
@@ -7,13 +8,32 @@ body {
     border: 2px solid #333;
     padding: 10px;
     margin: 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
+.centre-title{
+    text-align: center;
+}
+
+/*Thanks to ChatGPT for help with the columns and navbar CSS */
+
+.column {
+    float: left;
+    width: 50%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 ul.navbar {
     list-style-type: none;
     margin: 0;
     padding: 0;
     background-color: #333;
     overflow: hidden;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 ul.navbar li {
