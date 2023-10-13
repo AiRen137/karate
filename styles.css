@@ -10,6 +10,15 @@ body {
     margin: 10px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
+.belt-box{
+    background-color: #333;
+    border: 2px solid #333;
+    margin: auto;
+    margin-top: 10px;
+    width: 30%;
+    align-items: center;
+    color:white
+}
 .centre-title{
     text-align: center;
 }
@@ -80,4 +89,25 @@ ul.navbar .dropdown-content a:hover {
 /* Show the dropdown when hovering over the parent element */
 ul.navbar li.dropdown:hover .dropdown-content {
     display: block;
+}
+
+a:link{
+    color:firebrick;
+    text-decoration: none;
+}
+
+a:visited{
+    color: firebrick;
+    text-decoration: none;
+}
+
+a:hover{
+    color: black;
+    text-decoration: underline;
+}
+.grade-link{
+    color:white;
+}
+.grade-link:visited{
+    color: white;
 }
